@@ -4,17 +4,35 @@ import java.util.ArrayList;
 
 public class ProgramTest extends TestCase {
 
-    public void testContains() {
+    public void testContainsIfTrue() {
         // given
         ArrayList<String> list = new ArrayList<>();
-        ArrayList<String> emptyList = new ArrayList<>();
 
         // when
         list.add("string");
 
         // then
         assertTrue(Program.contains(list,"string"));
+    }
+
+    public void testContainsIfFalse() {
+        // given
+        ArrayList<String> list = new ArrayList<>();
+
+        // when
+        list.add("string");
+
+        // then
         assertFalse(Program.contains(list, "newString"));
+    }
+
+    public void testContainsIfEmpty() {
+        // given
+        ArrayList<String> emptyList = new ArrayList<>();
+
+        // when
+
+        // then
         assertFalse(Program.contains(emptyList, "string"));
     }
 
